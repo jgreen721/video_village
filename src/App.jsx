@@ -107,8 +107,9 @@ const Experience = ()=>{
       // while(camera.position.x < 0){
         if(camera.position.x < -1){
         camera.position.x+=.08
-        camera.position.z-=.04
-        camera.position.z += .01;
+        camera.position.z-=.02
+        // camera.position.z += .01;
+        camera.rotation.y-=.001;
         console.log("animate")
 
        }
