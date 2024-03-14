@@ -49,7 +49,7 @@ const Guy = ()=>{
 
 
 const Store = ()=>{
-  const img = useGLTF("./hopkintondrug.glb");
+  const img = useGLTF("./hopkintondrugflorio.glb");
 
 
 
