@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react'
+import { useEffect, useRef, Suspense } from 'react'
 import {Canvas, useThree, useFrame} from "@react-three/fiber"
 import {OrbitControls, useGLTF, useAnimations, Environment} from "@react-three/drei"
 import * as THREE from "three"
@@ -127,6 +127,7 @@ const Experience = ()=>{
 function App() {
 
   return (
+    <Suspense fallback={()=><View><Text>Loading...</Text></View>}>
     <div className="app">
       <div className="text-overlay-container">
         <header>
@@ -141,12 +142,13 @@ function App() {
            <color attach="background" args={["black"]}/>
            <ambientLight intensity={1}/>
            <Environment preset="city" background={false}/>
-           <OrbitControls/>
+    
 
         
            <Experience/>
       </Canvas>
     </div>
+    </Suspense>
   )
 }
 
