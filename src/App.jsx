@@ -127,7 +127,7 @@ const Experience = ()=>{
 function App() {
 
   return (
-    <Suspense fallback={()=><View><Text style={{color:"white"}}>Loading...</Text></View>}>
+    <Suspense fallback={()=><Canvas style={{height:"100vh",width:"100vw",backgroundColor:"black"}}><Text style={{color:"white"}}>Loading...</Text></Canvas>}>
     <div className="app">
       <div className="text-overlay-container">
         <header>
